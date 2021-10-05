@@ -1,0 +1,64 @@
+<html>
+<head>
+	<title>ROC van Twente - GIT project</title>
+	<link rel="stylesheet" href="styles/style.css" type="text/css" />
+</head>
+<body>
+	<h1>Git flow</h1>
+	<h2>Herhaling</h2>
+	<p>
+		GIT kan wijzigingen in tekst bestanden herkennen en opslaan.
+		Op die manier is het makkelijk om bij te houden wat er veranderd
+		is gedurende het project en ook wie die wijzigingen gemaakt heeft.
+	</p>
+	<h3>Commando's</h3>
+	<ul>
+		<li><span class="code">git status</span></li>
+		<li><span class="code">git add [file]</span></li>
+		<li><span class="code">git add -m "[message]"</span></li>
+		<li><span class="code">git pull</span></li>
+		<li><span class="code">git push</span></li>
+		<li><span class="code">git branch [<i>branchnaam</i>]</span></li>
+		<li><span class="code">git checkout [<i>branchnaam</i>]</span></li>
+		<li><span class="code">git merge [<i>branchnaam</i>] --no-commit</span></li>
+	</ul>	
+	<p>
+		Code delen met het gehele ontwikkelteam via een centrale server zorgt ervoor dat iedereen
+		elke dag de nieuwste wijzigingen en verbeteringen kan gebruiken. (<span class="code">git pull</span>)<br />
+		Tenminste, als iedereen in staat is om aan het eind van de dag al zijn wijzigingen te delen via de remote repository. (<span class="code">git push</span>) Dat kan een eigen GIT server zijn, of natuurlijk github.com
+	</p>
+	<h2>Wat is Git flow?</h2>
+	<h3>Branching methoden</h3>
+	<p>
+		Het staat ieder team volkomen vrij om een eigen branching standaard te hanteren:		
+	</p>
+	<ul>
+		<li>branches per main versie (1.x, 2.x, etc.)</li>
+		<li>issue branches</li>
+		<li>feature branches</li>
+		<li>experiment branches</li>
+		<li>persoonlijke branches</li>
+		<li>etc.</li>
+	</ul>
+	<p>
+		Git flow biedt een methode die voor game development heel goed werkt.
+		Het principe daarbij is dat alle gebruikers altijd (gratis) de meest recente versie van onze software willen gebruiken.
+	</p>
+	<h3>Git flow branches</h3>
+	<ul>
+		<li>master<br />
+		Deze branch bevat in principe alleen commits voor iedere nieuwe versie</li>
+		<li>develop<br />
+		Dit is de branch waarop het team actief werkt aan de volgende versie</li>
+		<li>feature/x<br />
+		Deze branches worden gebruikt om nieuwe features te ontwikkelen in een sub-team</li>		
+		<li>bugfix<br />
+		Een fout in de develop of release branch moet "even" worden opgelost. 
+		(Geen feature branch nodig.)</li>
+		<li>release<br />
+		De nieuwe versie van de software is klaar om uitgebracht te worden. (Alleen nog bugfixes, geen nieuwe features meer.)</li>
+		<li>hotfix<br />
+		Een ernstige fout in de master (main) branch is ontdekt en moet NU opgelost worden.</li>
+	</ul>
+</body>
+</html>
